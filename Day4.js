@@ -22,7 +22,11 @@ HINT 2: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
 
 // let bill = 275;
 // let bill = 40;
+
+console.time("timer")
+
 let bill = 430;
-let tip = bill >= 50 && bill <= 300 ?  15 : 20;
+let tip = bill >= 50 && bill <= 300 ?  (15/100) * bill : (20/100) * bill;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}.`);
 
+console.timeLog("timer")
