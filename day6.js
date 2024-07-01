@@ -14,18 +14,17 @@ BONUS: Create an array totals containing the total values, so the bill + tip.
 
 TEST DATA: 125, 555, and 44.
 
-
 */
 
-const calcTip= (bill) => {
-    return (bill >= 50 && bill <= 300) ? 0.15 * bill : 0.20 * bill;
+const calcTip = (bill) => {
+    return bill >= 50 && bill <=300 ? 0.15 * bill : 0.2 * bill;
 }
+let bills = [125,555,44]
 
+// let tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])]
+// let totals = [bills[0] + tips[0],bills[1] + tips[1],bills[2] + tips[2]];
+// console.log(totals);
 
-let bills = [125, 555, 44]
-let tips = bills.map(bill => calcTip(bill));
-
-let totals = bills.map((bill,index) => bill + tips[index])
+let tips = bills.map(bill => calcTip(bill))
+let totals = bills.map((bill, index) => bill + tips[index])
 console.log(totals);
-
-
